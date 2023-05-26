@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>Welcome to Tong's homepage</title>
-   </head>
- 
+<head>
+  <title>HTML框架</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .left {
+      flex: 2;
+      flex-direction: column;
+      overflow: auto;
+      word-wrap: break-word;
+    }
+
+    .block {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .block img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    
+    .right {
+      flex: 1;
+    }
+  </style>
+</head>
 <body>
-  <div class='left_align'>
-    <h1>Tong Wu</h1>
-  I am a PhD student in the 
-  <a href='https://www.cs.manchester.ac.uk/research/expertise/systems-and-software-security/'>
-    Systems and Software Security (S3)</a> group, Department of Computer Science at the University of Manchester.
+  <div class="container">
+    <div class="left">
+      <div class="block">
+        <h1>Tong Wu</h1>
+        <p>I am a PhD student at the university of Manchester. Currently working on model checking for concurrent programs.<p>
+      </div>
+      <div class="block">
+        <h3>Publications</h3>
+        <p>Wu, T., Schrammel, P., & Cordeiro, L. C. (2022, March). Wit4Java: A violation-witness validator for Java verifiers (competition contribution). In Tools and Algorithms for the Construction and Analysis of Systems: 28th International Conference, TACAS 2022, Held as Part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2022, Munich, Germany, April 2–7, 2022, Proceedings, Part II (pp. 484-489). Cham: Springer International Publishing.</p>
+      </div>
+      <div class="block">
+        <h3>Software Projects</h3>
+        <p><a href="https://github.com/esbmc/esbmc">ESBMC</a> : a bounded model checker based on satisfiability modulo theories (SMT) for the verification of single- and multi-threaded C/C++ programs.<p>
+        <p><a href="https://github.com/wit4java/wit4java">Wit4Java</a> : a violation-witness validator for java verifiers.<p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="block">
+        <img src="self.jpg" alt="photo">
+      </div>
+      <div class="block">
+        <h3>My Profiles</h3>
+        <p><a href="https://github.com/Anthonysdu">Github</a></p>
+      </div>
+      <div class="block">
+        <h3>Contact information</h3>
+        <p>wutonguom@gmail.com</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
