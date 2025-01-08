@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tong Wu 武桐</title>
+  <title>Tong Wu</title>
   <style>
     body {
       margin: 0;
@@ -70,24 +70,86 @@
       margin-bottom: 15px;
     }
 
+    .publication-title {
+      font-weight: bold;
+    }
+
+    .publication-details {
+      font-style: italic;
+    }
+
     .publication {
-      display: flex;
-      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    .publication-item {
+      margin-bottom: 15px;
+    }
+
+    .publication-authors, .publication-content {
+      display: inline-block;
+      vertical-align: top;
     }
 
     .publication-authors {
-      display: flex;
-      align-items: baseline;
+      font-weight: bold;
+      width: 40%; /* Adjust this value based on the desired layout */
     }
 
     .publication-content {
       font-style: italic;
-      display: flex;
-      flex-wrap: wrap;
+      width: 55%; /* Adjust this value based on the desired layout */
+      text-align: justify;
     }
 
-    .publication-bullet {
-      margin-right: 10px;
+    /* Responsive design for mobile screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .left, .right {
+        flex: none;
+        width: 100%;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .publication-authors {
+        width: 100%;
+      }
+
+      .publication-content {
+        width: 100%;
+      }
+    }
+
+    /* Responsive design for very small screens (like some mobile phones) */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 12px;
+      }
     }
 
   </style>
@@ -98,33 +160,27 @@
     <!-- Left section -->
     <div class="left">
       <div class="block">
-        <h1>Tong Wu 武桐</h1>
+        <h1>Tong Wu</h1>
         <p>I am a PhD student at the University of Manchester, currently working on formal verification (bounded model checking) for concurrent software.</p>
       </div>
 
       <div class="block">
         <h3>Publications</h3>
 
-        <!-- First publication -->
-        <div class="publication">
-          <span class="publication-content">
-            JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking. In <i>Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis</i> (pp. 1831-1835).
-          </span>
-        </div>
+            <li <b>Cheng, Z., Wu, T., Schrammel, P., Tihanyi, N., de Lima Filho, E. B., & Cordeiro, L. C. (2024, September):</b></li>
+            <p>
+              JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking. In <i>Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis</i> (pp. 1831-1835).
+            </p>
 
-        <!-- Second publication -->
-        <div class="publication">
-          <span class="publication-content">
-            Verifying components of Arm® Confidential Computing Architecture with ESBMC. In <i>SAS 2024, Proceedings.</i> Springer Nature.
-          </span>
-        </div>
+            <li <b>Wu, T., Xiong, S., Manino, E., Stockwell, G., & Cordeiro, L. C. (2024, Jul):</b></li>
+            <p>
+              Verifying components of Arm® Confidential Computing Architecture with ESBMC. In <i>SAS 2024, Proceedings.</i> Springer Nature.
+            </p>
 
-        <!-- Third publication -->
-        <div class="publication">
-          <span class="publication-content">
-            Wit4Java: A violation-witness validator for Java verifiers (competition contribution). In <i>International Conference on Tools and Algorithms for the Construction and Analysis of Systems</i> (pp. 484-489). Cham: <i>Springer International Publishing</i>.
-          </span>
-        </div>
+            <li<b>Wu, T., Schrammel, P., & Cordeiro, L. C. (2022, March):</b></li>
+            <p>
+              Wit4Java: A violation-witness validator for Java verifiers (competition contribution). In <i>International Conference on Tools and Algorithms for the Construction and Analysis of Systems</i> (pp. 484-489). Cham: <i>Springer International Publishing</i>.
+            </p>
 
       </div>
 
