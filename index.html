@@ -84,19 +84,18 @@
 
     .publication-item {
       margin-bottom: 15px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: block;
     }
 
     .publication-authors {
       font-weight: bold;
-      width: 40%; /* Adjust width to balance authors and content */
+      display: inline;
+      margin-right: 10px;
     }
 
     .publication-content {
       font-style: italic;
-      width: 55%; /* Adjust width for content */
+      display: inline;
       text-align: justify;
     }
 
@@ -168,35 +167,29 @@
 
         <!-- First publication -->
         <div class="publication">
-          <div class="publication-item">
-            <span class="publication-bullet">&bull;</span>
-            <p class="publication-authors"><b>Cheng, Z., Wu, T., Schrammel, P., Tihanyi, N., de Lima Filho, E. B., & Cordeiro, L. C. (2024, September):</b></p>
-            <p class="publication-content">
-              JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking. In <i>Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis</i> (pp. 1831-1835).
-            </p>
-          </div>
+          <span class="publication-bullet">&bull;</span>
+          <span class="publication-authors"><b>Cheng, Z., Wu, T., Schrammel, P., Tihanyi, N., de Lima Filho, E. B., & Cordeiro, L. C. (2024, September):</b></span>
+          <span class="publication-content">
+            JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking. In <i>Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis</i> (pp. 1831-1835).
+          </span>
         </div>
 
         <!-- Second publication -->
         <div class="publication">
-          <div class="publication-item">
-            <span class="publication-bullet">&bull;</span>
-            <p class="publication-authors"><b>Wu, T., Xiong, S., Manino, E., Stockwell, G., & Cordeiro, L. C. (2024, Jul):</b></p>
-            <p class="publication-content">
-              Verifying components of Arm® Confidential Computing Architecture with ESBMC. In <i>SAS 2024, Proceedings.</i> Springer Nature.
-            </p>
-          </div>
+          <span class="publication-bullet">&bull;</span>
+          <span class="publication-authors"><b>Wu, T., Xiong, S., Manino, E., Stockwell, G., & Cordeiro, L. C. (2024, Jul):</b></span>
+          <span class="publication-content">
+            Verifying components of Arm® Confidential Computing Architecture with ESBMC. In <i>SAS 2024, Proceedings.</i> Springer Nature.
+          </span>
         </div>
 
         <!-- Third publication -->
         <div class="publication">
-          <div class="publication-item">
-            <span class="publication-bullet">&bull;</span>
-            <p class="publication-authors"><b>Wu, T., Schrammel, P., & Cordeiro, L. C. (2022, March):</b></p>
-            <p class="publication-content">
-              Wit4Java: A violation-witness validator for Java verifiers (competition contribution). In <i>International Conference on Tools and Algorithms for the Construction and Analysis of Systems</i> (pp. 484-489). Cham: <i>Springer International Publishing</i>.
-            </p>
-          </div>
+          <span class="publication-bullet">&bull;</span>
+          <span class="publication-authors"><b>Wu, T., Schrammel, P., & Cordeiro, L. C. (2022, March):</b></span>
+          <span class="publication-content">
+            Wit4Java: A violation-witness validator for Java verifiers (competition contribution). In <i>International Conference on Tools and Algorithms for the Construction and Analysis of Systems</i> (pp. 484-489). Cham: <i>Springer International Publishing</i>.
+          </span>
         </div>
 
       </div>
