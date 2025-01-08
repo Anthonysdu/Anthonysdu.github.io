@@ -46,9 +46,9 @@
 
     p {
       font-size: 16px;
-      line-height: 1.4;  /* Reduce line-height for tighter text */
+      line-height: 1.4;
       color: #555;
-      margin-bottom: 5px; /* Reduce margin-bottom */
+      margin-bottom: 5px;
     }
 
     a {
@@ -82,74 +82,81 @@
       margin-bottom: 10px;
     }
 
-    /* Adjust author and content alignment */
+    .publication-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
     .publication-authors {
-      display: inline-block;
-      width: 100%;
-      vertical-align: top;
-      margin-right: 10px;
-      font-weight: bold;  /* Make authors' names bold */
+      font-weight: bold;
+      margin-bottom: 5px; /* Adjust the margin between authors and content */
     }
 
     .publication-content {
-      display: inline-block;
-      width: 100%;
-      vertical-align: top;
       text-align: justify;
+      font-style: italic;
+      line-height: 1.6;
     }
 
-    .publication-item {
-      margin-bottom: 5px; /* Reduced margin-bottom */
+    /* Adjust author and content alignment */
+    .publication-content {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .publication-authors {
+      display: inline-block;
       width: 100%;
     }
 
     /* Responsive design for mobile screens */
     @media (max-width: 768px) {
       .container {
-        flex-direction: column; /* Stack sections vertically */
-        gap: 10px; /* Reduce space between blocks */
+        flex-direction: column;
+        gap: 10px;
       }
 
       .left, .right {
         flex: none;
-        width: 100%; /* Ensure blocks take full width on small screens */
-        padding: 15px; /* Adjust padding for mobile */
+        width: 100%;
+        padding: 15px;
       }
 
       h1 {
-        font-size: 28px; /* Smaller header font size on mobile */
+        font-size: 28px;
       }
 
       h3 {
-        font-size: 20px; /* Smaller sub-header font size */
+        font-size: 20px;
       }
 
       p {
-        font-size: 14px; /* Reduce paragraph font size */
-        margin-bottom: 10px; /* Slightly increase bottom margin for spacing */
+        font-size: 14px;
+        margin-bottom: 10px;
       }
 
       .publication-authors {
-        width: 100%; /* Ensure author names take full width */
+        width: 100%;
       }
 
       .publication-content {
-        width: 100%; /* Ensure publication content takes full width */
+        width: 100%;
       }
     }
 
     /* Responsive design for very small screens (like some mobile phones) */
     @media (max-width: 480px) {
       h1 {
-        font-size: 24px; /* Further reduce header font size */
+        font-size: 24px;
       }
 
       h3 {
-        font-size: 18px; /* Further reduce sub-header font size */
+        font-size: 18px;
       }
 
       p {
-        font-size: 12px; /* Smaller font size for paragraphs */
+        font-size: 12px;
       }
     }
 
@@ -168,6 +175,7 @@
       <div class="block">
         <h3>Publications</h3>
 
+        <!-- First publication -->
         <div class="publication">
           <div class="publication-item">
             <p class="publication-authors">&bull; <b>Cheng, Z., Wu, T., Schrammel, P., Tihanyi, N., de Lima Filho, E. B., & Cordeiro, L. C. (2024, September).</b></p>
@@ -177,6 +185,7 @@
           </div>
         </div>
 
+        <!-- Second publication -->
         <div class="publication">
           <div class="publication-item">
             <p class="publication-authors">&bull; <b>Wu, T., Xiong, S., Manino, E., Stockwell, G., & Cordeiro, L. C. (2024, Jul).</b></p>
@@ -186,6 +195,7 @@
           </div>
         </div>
 
+        <!-- Third publication -->
         <div class="publication">
           <div class="publication-item">
             <p class="publication-authors">&bull; <b>Wu, T., Schrammel, P., & Cordeiro, L. C. (2022, March).</b></p>
