@@ -81,7 +81,6 @@
     .block img {
       max-width: 100%;
       height: auto;
-      border-radius: 10px;
       margin-bottom: 20px;
     }
 
@@ -106,25 +105,17 @@
     }
 
     .icon {
-      max-height: 40px; /* 控制图标大小 */
+      max-height: 30px; /* 控制图标大小 */
       transition: transform 0.3s;
     }
 
     .icon:hover {
       transform: scale(1.1); /* 鼠标悬停时放大图标 */
     }
-
-    .social-links a {
-      display: inline-block;
-      color: white;
-      padding: 10px 20px;
-      margin: 10px 0;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .social-links a:hover {
-      background-color: #5a005a; /* Darker purple for hover effect */
+  
+    /* Add a border radius to the personal photo only */
+    .profile-img {
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -171,7 +162,8 @@
     <!-- Right section -->
     <div class="right">
       <div class="block">
-        <img src="self1.jpg" alt="Tong Wu's Photo">
+        <!-- Add border-radius to the personal image -->
+        <img src="self1.jpg" alt="Tong Wu's Photo" class="profile-img">
       </div>
 
       <div class="block">
@@ -181,7 +173,7 @@
             <img src="GitHub_Logo.png" alt="Github" class="icon">
           </a>
           <a href="https://www.linkedin.com/in/tongwuuom" class="normal-link" target="_blank">
-            <img src="LinkedIn-Blue-21-┬«@2x.png" alt="LinkedIn" class="icon">
+            <img src="LinkedIn-Blue-34-┬«@2x.png" alt="LinkedIn" class="icon">
           </a>
           <a href="https://research.manchester.ac.uk/en/persons/tong.wu-11-postgrad" class="normal-link" target="_blank">
             <img src="TAB_col_white_background.png" alt="UoM" class="icon">
