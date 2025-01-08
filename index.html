@@ -1,84 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tong Wu</title>
   <style>
     body {
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
     }
 
     .container {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 1200px;
+      margin: 20px auto;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .left {
       flex: 2;
-      flex-direction: column;
-      overflow: auto;
-      word-wrap: break-word;
     }
 
-    .block {
-      flex: 1;
-      padding: 10px;
+    h1 {
+      font-size: 32px;
+      color: #333;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .block img {
-      max-width: 80%;
-      max-height: 80%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
-    
-    .right {
-      flex: 1;
+
+    .block {
+      margin-bottom: 20px;
+    }
+
+    .publication-title {
+      font-weight: bold;
+    }
+
+    .publication-details {
+      font-style: italic;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
+    <!-- Left section -->
     <div class="left">
       <div class="block">
         <h1>Tong Wu</h1>
-        <p>I am a PhD student at the University of Manchester. Currently working on formal verification (bounded model checking) for concurrent software.<p>
+        <p>I am a PhD student at the University of Manchester, currently working on formal verification (bounded model checking) for concurrent software.</p>
       </div>
+
       <div class="block">
         <h3>Publications</h3>
-        <p>&bull; <b>Cheng, Z., Wu, T., Schrammel, P., Tihanyi, N., de Lima Filho, E. B., & Cordeiro, L. C. (2024, September).</b></p>
-        <p>
-          JCWIT: A Correctness-Witness Validator for Java Programs Based on 
-          Bounded Model Checking. In <i>Proceedings of the 33rd ACM SIGSOFT International Symposium 
-          on Software Testing and Analysis</i> (pp. 1831-1835).
+        <p>&bull; <span class="publication-title">Cheng, Z., Wu, T., Schrammel, P., Tihanyi, N., de Lima Filho, E. B., & Cordeiro, L. C. (2024, September).</span></p>
+        <p class="publication-details">
+          JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking. In <i>Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis</i> (pp. 1831-1835).
         </p>
-        <p><b>Wu, T.</b>, Xiong, S., Manino, E., StockwelL, G. & Cordeiro, L. C. (2024, Jul). Verifying components of Arm® Confidential Computing Architecture with ESBMC. <i>In SAS 2024, Proceedings.</i>  Springer Nature.</p>
+        <p><span class="publication-title">Wu, T.</span>, Xiong, S., Manino, E., Stockwell, G. & Cordeiro, L. C. (2024, Jul). Verifying components of Arm® Confidential Computing Architecture with ESBMC. <i>In SAS 2024, Proceedings.</i> Springer Nature.</p>
         <p>
-          <b>Wu, T.</b>, Schrammel, P., & Cordeiro, L. C. (2022, March). Wit4Java: A violation-witness 
-          validator for Java verifiers (competition contribution). In <i>International Conference on Tools 
-          and Algorithms for the Construction and Analysis of Systems</i> (pp. 484-489). Cham: 
-          <i>Springer International Publishing</i>.
+          <span class="publication-title">Wu, T.</span>, Schrammel, P., & Cordeiro, L. C. (2022, March). Wit4Java: A violation-witness validator for Java verifiers (competition contribution). In <i>International Conference on Tools and Algorithms for the Construction and Analysis of Systems</i> (pp. 484-489). Cham: <i>Springer International Publishing</i>.
         </p>
       </div>
+
       <div class="block">
         <h3>Software Projects</h3>
-        <p><a href="https://github.com/esbmc/esbmc">ESBMC</a> : a bounded model checker based on satisfiability modulo theories (SMT) for the verification of single- and multi-threaded C/C++ programs.<p>
-        <p><a href="https://github.com/wit4java/wit4java">Wit4Java</a> : a violation-witness validator for Java verifiers.<p>
+        <p><a href="https://github.com/esbmc/esbmc">ESBMC</a> : A bounded model checker based on satisfiability modulo theories (SMT) for the verification of single- and multi-threaded C/C++ programs.</p>
+        <p><a href="https://github.com/wit4java/wit4java">Wit4Java</a> : A violation-witness validator for Java verifiers.</p>
       </div>
     </div>
+
+    <!-- Right section -->
     <div class="right">
       <div class="block">
-        <img src="self1.jpg" alt="photo">
+        <img src="self1.jpg" alt="Tong Wu's Photo">
       </div>
+
       <div class="block">
         <h3>My Profiles</h3>
-        <p><a href="https://github.com/Anthonysdu">Github</a></p>
-        <p><a href="https://www.linkedin.com/in/tongwuuom">LinkedIn</a></p>
+        <p><a href="https://github.com/Anthonysdu" target="_blank">Github</a></p>
+        <p><a href="https://www.linkedin.com/in/tongwuuom" target="_blank">LinkedIn</a></p>
       </div>
+
       <div class="block">
-        <h3>Contact information</h3>
+        <h3>Contact Information</h3>
         <p>wutonguom@gmail.com</p>
       </div>
     </div>
   </div>
+
 </body>
 </html>
