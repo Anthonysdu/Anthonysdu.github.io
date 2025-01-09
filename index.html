@@ -22,13 +22,15 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap; /* 在小屏幕上允许换行 */
     }
 
     .navbar a {
       color: white;
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 8px 15px; /* 减小间距以适应小屏幕 */
       font-weight: bold;
+      font-size: 14px; /* 调整字体大小 */
       transition: background-color 0.3s;
     }
 
@@ -126,16 +128,12 @@
   }
   @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* 改为垂直排列 */
-    align-items: center;
-    padding: 5px 0;
+    padding: 5px 0; /* 减小顶部和底部的内边距 */
   }
 
   .navbar a {
-    display: block; /* 每个链接独占一行 */
-    padding: 8px 0;
-    width: 100%; /* 链接占满可用宽度 */
-    text-align: center;
+    padding: 5px 10px; /* 减少链接内边距 */
+    font-size: 12px; /* 调整字体大小以适应小屏幕 */
   }
 }
   </style>
