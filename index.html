@@ -118,10 +118,12 @@
     }
 
     .profile-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+    max-width: 100%;
+    height: auto; /* 确保按比例缩放 */
+    border-radius: 10px; /* 原来的圆角 */
+    display: block; /* 防止图片与文字间的多余间距问题 */
+    margin: 0 auto; /* 居中图片 */
+  }
   </style>
 </head>
 <body>
