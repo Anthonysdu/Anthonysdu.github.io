@@ -3,226 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tong Wu</title>
+  <title>Your Name - Academic Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    body {
+    /* Global Styles */
+    body, html {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', Arial, sans-serif;
-      background: linear-gradient(to right, #434343, #000000);
-      color: #fff;
-    }
-
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    .navbar a:hover {
-      color: #FFD700;
-      transform: scale(1.1);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 50px auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      padding: 0 20px;
-    }
-
-    .left, .right {
-      flex: 1;
-      min-width: 320px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .left {
-      flex: 2;
-    }
-
-    h1 {
-      font-size: 48px;
-      color: #FFD700;
-      margin-bottom: 30px;
-      text-align: left;
-      text-transform: uppercase;
-    }
-
-    h3 {
-      font-size: 28px;
-      color: #FFD700;
-      margin-top: 40px;
-      border-bottom: 2px solid #FFD700;
-      padding-bottom: 10px;
-    }
-
-    p {
-      font-size: 18px;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #2e2e2e;
       line-height: 1.8;
-      color: #eee;
-      margin-bottom: 20px;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1a1a1a;
     }
 
     a {
-      color: #FFD700;
+      color: #0066cc;
       text-decoration: none;
-      font-weight: 600;
       transition: color 0.3s;
     }
 
     a:hover {
-      color: #fff;
-      text-decoration: underline;
+      color: #004d99;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #ffffff;
+      border-bottom: 2px solid #e6e6e6;
+      padding: 2rem 3rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav ul li {
+      font-weight: 500;
+    }
+
+    /* Main Styles */
+    main {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #0066cc;
+      padding-bottom: 0.5rem;
+    }
+
+    #about-photo {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    #about-photo img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     ul {
-      padding-left: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    li {
-      font-size: 18px;
-      margin-bottom: 15px;
+    ul li {
+      margin-bottom: 1rem;
+      font-size: 1rem;
     }
 
-    .icon-container {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      justify-content: center;
+    ul li strong {
+      color: #1a1a1a;
     }
 
-    .icon {
-      max-height: 40px;
-      transition: transform 0.3s;
+    /* Footer Styles */
+    footer {
+      background-color: #1a1a1a;
+      color: #f9f9f9;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
     }
 
-    .icon:hover {
-      transform: scale(1.3);
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
     }
 
-    .profile-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 15px;
-      display: block;
-      margin: 20px auto;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
-    }
-
+    /* Responsive Design */
     @media (max-width: 768px) {
-      .navbar {
-        padding: 10px 0;
+      #about-photo {
+        grid-template-columns: 1fr;
       }
 
-      .navbar a {
-        margin: 0 10px;
-        font-size: 14px;
+      header h1 {
+        font-size: 2.4rem;
       }
 
-      h1 {
-        font-size: 36px;
+      nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
       }
 
-      h3 {
-        font-size: 24px;
-      }
-
-      p, li {
-        font-size: 16px;
+      section {
+        padding: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
+  <header>
+    <h1>TONG WU 武桐</h1>
+    <nav>
+      <ul>
+        <li><a href="#about-photo">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#software-projects">Projects</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Navigation bar -->
-  <div class="navbar">
-    <a href="#about">About</a>
-    <a href="#publications">Publications</a>
-    <a href="#projects">Software Projects</a>
-    <a href="#profiles">Profiles</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <div class="container">
-    <!-- Left section -->
-    <div class="left" id="about">
-      <div class="block">
-        <h1>Tong Wu 武桐</h1>
-        <p>I am a PhD student at the <a href="https://www.manchester.ac.uk/" target="_blank">University of Manchester</a>,
-          supervised by <a href="https://ssvlab.github.io/lucasccordeiro/" target="_blank">Prof. Lucas C. Cordeiro</a> and 
-          <a href="https://personalpages.manchester.ac.uk/staff/pavlos.petoumenos/" target="_blank">Dr. Pavlos Petoumenos</a>. 
-          My research interests are formal verification (bounded model checking) and machine learning on concurrent software.</p>
+  <!-- Main Content -->
+  <main>
+    <!-- About and Photo Section -->
+    <section id="about-photo">
+      <div>
+        <h2>About Me</h2>
+        <p>I am a PhD student at the <a href="https://www.manchester.ac.uk/">University of Manchester</a>, 
+          supervised by <a href="https://ssvlab.github.io/lucasccordeiro/">Prof. Lucas C. Cordeiro</a> and 
+          <a href="https://personalpages.manchester.ac.uk/staff/pavlos.petoumenos/">Dr. Pavlos Petoumenos</a>,
+          fully funded by <a href="https://www.ukri.org/councils/epsrc/">EPSRC</a>
+          and <a href="https://www.cs.manchester.ac.uk/arm-coe/">Arm Centre of Excellence</a>.
+          My research interests focus on formal verification (bounded model checking) and machine learning on verifying concurrent software.</p>
       </div>
+      <img src="self1.jpg" alt="Your Portrait">
+    </section>
 
-      <div class="block" id="publications">
-        <h3>Publications</h3>
-        <ul>
-          <li><b>Cheng, Z., Wu, T., Schrammel, P., Tihanyi, N., de Lima Filho, E. B., & Cordeiro, L. C. (2024, Sept):</b></li>
-          <p>JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking. In <i>Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis</i> (pp. 1831-1835).</p>
-          <li><b>Wu, T., Xiong, S., Manino, E., Stockwell, G., & Cordeiro, L. C. (2024, Jul):</b></li>
-          <p>Verifying components of Arm&reg; Confidential Computing Architecture with ESBMC. In <i>SAS 2024, Proceedings.</i> Springer Nature.</p>
-          <li><b>Wu, T., Schrammel, P., & Cordeiro, L. C. (2022, Mar):</b></li>
-          <p>Wit4Java: A violation-witness validator for Java verifiers (competition contribution). In <i>International Conference on Tools and Algorithms for the Construction and Analysis of Systems</i> (pp. 484-489). Cham: <i>Springer International Publishing</i>.</p>
-        </ul>
-      </div>
+    <!-- Publications Section -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li><strong>JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking:</strong> <em>ISSTA</em> (2024.09). <a href="https://dl.acm.org/doi/10.1145/3650212.3685303">Link</a></li>
+        <li><strong>Verifying components of Arm&reg; Confidential Computing Architecture with ESBMC:</strong> <em>SAS</em> (2024.07). <a href="https://2024.splashcon.org/home/sas-2024#event-overview">Link</a></li>
+        <li><strong>Wit4Java: A violation-witness validator for Java verifiers (competition contribution):</strong> <em>TACAS</em> (2022.03). <a href="https://link.springer.com/chapter/10.1007/978-3-030-99527-0_36">Link</a></li>
+      </ul>
+    </section>
 
-      <div class="block" id="projects">
-        <h3>Software Projects</h3>
-        <p><a href="https://github.com/esbmc/esbmc">ESBMC</a>: A bounded model checker based on satisfiability modulo theories (SMT) for the verification of single- and multi-threaded C/C++ programs.</p>
-        <p><a href="https://github.com/wit4java/wit4java">Wit4Java</a>: A violation-witness validator for Java verifiers.</p>
-      </div>
-    </div>
+    <!-- Software Projects Section -->
+    <section id="software-projects">
+      <h2>Software Projects</h2>
+      <ul>
+        <li><strong>ESBMC:</strong> A SMT-based bounded model checker for the verification of single- and multi-threaded C/C++ programs. <a href="https://github.com/esbmc/esbmc">GitHub</a></li>
+        <li><strong>Wit4Java:</strong> A violation-witness validator for Java verifiers. <a href="https://github.com/wit4java/wit4java">GitHub</a></li>
+      </ul>
+    </section>
 
-    <!-- Right section -->
-    <div class="right">
-      <div class="block" id="profiles">
-        <img src="self1.jpg" alt="Tong Wu's Photo" class="profile-img">
-      </div>
+    <!-- Links Section -->
+    <section id="links">
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://scholar.google.com/citations?user=v3AATMQAAAAJ&hl=en">Google Scholar</a></li>
+        <li><a href="https://github.com/Anthonysdu">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/tongwuuom">LinkedIn</a></li>
+      </ul>
+    </section>
 
-      <div class="block">
-        <h3>My Profiles</h3>
-        <div class="icon-container">
-          <a href="https://github.com/Anthonysdu" target="_blank">
-            <img src="github-mark-white.png" alt="Github" class="icon">
-          </a>
-          <a href="https://www.linkedin.com/in/tongwuuom" target="_blank">
-            <img src="In-White-72@2x.png" alt="LinkedIn" class="icon">
-          </a>
-          <a href="https://research.manchester.ac.uk/en/persons/tong.wu-11-postgrad" target="_blank">
-            <img src="UoM.png" alt="UoM" class="icon">
-          </a>
-        </div>
-      </div>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: wutonguom@gmail.com</p>
+    </section>
+  </main>
 
-      <div class="block" id="contact">
-        <h3>Contact Information</h3>
-        <p>wutonguom@gmail.com</p>
-      </div>
-    </div>
-  </div>
-
+  <!-- Footer -->
+  <footer>
+    <p>Last updated: January 2025</p>
+  </footer>
 </body>
 </html>
