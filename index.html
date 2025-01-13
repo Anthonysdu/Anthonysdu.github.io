@@ -136,28 +136,46 @@
     }
 
     /* Responsive Styles */
-  @media (max-width: 768px) {
-    /* 调整标题大小 */
-    header h1 {
-      font-size: 1.8rem; /* 缩小标题字体 */
-    }
-  
-    /* 调整菜单间距 */
-    nav ul {
-      gap: 1rem; /* 减小菜单项之间的间距 */
-    }
-  
-    /* 减小页边距，增加可用空间 */
-    header {
-      padding: 0.8rem 1.5rem; /* 减少顶部和左右边距 */
-    }
-  
-    /* 调整菜单按钮的位置和大小 */
-    #menu-toggle {
-      font-size: 1.8rem; /* 缩小菜单按钮大小 */
-    }
-  }
+    @media (max-width: 768px) {
+      /* 调整标题大小 */
+      header h1 {
+        font-size: 1.8rem; /* 缩小标题字体 */
+      }
 
+      /* 调整菜单间距 */
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem; /* 减小菜单项之间的间距 */
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      /* 减小页边距，增加可用空间 */
+      header {
+        padding: 0.8rem 1.5rem; /* 减少顶部和左右边距 */
+      }
+
+      /* 调整菜单按钮的位置和大小 */
+      #menu-toggle {
+        display: block;
+        font-size: 1.8rem; /* 缩小菜单按钮大小 */
+      }
+
+      /* About 图片区域调整 */
+      #about-photo {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
