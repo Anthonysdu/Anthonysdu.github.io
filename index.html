@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tong Wu</title>
+  <title>Your Name - Academic Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     /* Global Styles */
@@ -35,29 +35,40 @@
     header {
       background-color: #ffffff;
       border-bottom: 2px solid #e6e6e6;
-      padding: 2rem 3rem;
-      text-align: center;
+      padding: 1rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 100;
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       margin: 0;
     }
 
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 1rem 0 0;
+      margin: 0;
       display: flex;
-      justify-content: center;
       gap: 1.5rem;
     }
 
     nav ul li {
       font-weight: 500;
+    }
+
+    /* Menu Toggle Button */
+    #menu-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #0066cc;
     }
 
     /* Main Styles */
@@ -124,23 +135,31 @@
       font-size: 0.9rem;
     }
 
-    /* Responsive Design */
+    /* Responsive Styles */
     @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+
       #about-photo {
         grid-template-columns: 1fr;
-      }
-
-      header h1 {
-        font-size: 2.4rem;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      section {
-        padding: 1.5rem;
       }
     }
   </style>
@@ -149,8 +168,9 @@
   <!-- Header -->
   <header>
     <h1>TONG WU 武桐</h1>
+    <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
     <nav>
-      <ul>
+      <ul id="nav-menu">
         <li><a href="#about-photo">About</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#software-projects">Projects</a></li>
@@ -162,7 +182,6 @@
 
   <!-- Main Content -->
   <main>
-    <!-- About and Photo Section -->
     <section id="about-photo">
       <div>
         <h2>About Me</h2>
@@ -176,7 +195,6 @@
       <img src="self1.jpg" alt="Your Portrait">
     </section>
 
-    <!-- Publications Section -->
     <section id="publications">
       <h2>Publications</h2>
       <ul>
@@ -186,7 +204,6 @@
       </ul>
     </section>
 
-    <!-- Software Projects Section -->
     <section id="software-projects">
       <h2>Software Projects</h2>
       <ul>
@@ -195,7 +212,6 @@
       </ul>
     </section>
 
-    <!-- Links Section -->
     <section id="links">
       <h2>Links</h2>
       <ul>
@@ -205,16 +221,23 @@
       </ul>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: wutonguom@gmail.com</p>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>Last updated: January 2025</p>
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
