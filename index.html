@@ -134,7 +134,21 @@
       margin: 0;
       font-size: 0.9rem;
     }
-
+    .cv-bracket {
+  font-weight: bold;
+  color: #0066cc;
+    }
+    
+    .cv-link {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    .cv-link:hover {
+      color: #004d99;
+    }
     /* Responsive Styles */
     @media (max-width: 768px) {
       /* 调整标题大小 */
@@ -205,6 +219,7 @@
           fully funded by <a href="https://www.ukri.org/councils/epsrc/">EPSRC</a>
           and <a href="https://www.cs.manchester.ac.uk/arm-coe/">Arm Centre of Excellence</a>.
           My research interests focus on formal verification (bounded model checking) and machine learning on verifying concurrent software.</p>
+        <p><span class="cv-bracket">[</span><a href="Tong_CV.pdf" download="Tong_Wu_CV" class="cv-link">CV</a><span class="cv-bracket">]</span></p>
       </div>
       <img src="self1.jpg" alt="Your Portrait">
     </section>
