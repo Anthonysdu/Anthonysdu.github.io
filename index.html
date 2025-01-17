@@ -260,13 +260,22 @@
     <p>Last updated: January 2025</p>
   </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const menuLinks = navMenu.querySelectorAll('a'); // Select all links in the nav menu
 
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+  // Toggle the menu when the menu button is clicked
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Close the menu when a link is clicked on mobile
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
     });
-  </script>
+  });
+</script>
 </body>
 </html>
