@@ -31,6 +31,7 @@
       box-sizing: border-box;
       height: 100%;
       text-align: left;
+      position: relative;
     }
 
     .container {
@@ -109,11 +110,11 @@
       border-radius: 6px;
       color: var(--primary);
       transition: background-color var(--transition-speed);
-      background-color: transparent; /* 去掉背景颜色 */
+      background-color: transparent;
     }
 
     code:hover {
-      background-color: transparent; /* 保持透明背景 */
+      background-color: transparent;
     }
 
     a {
@@ -189,10 +190,36 @@
         font-size: 1.6rem;
       }
     }
+
+    /* Move logo bar to bottom */
+    .logo-bar {
+      bottom: 1rem;
+      right: 1rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .logo-bar a {
+      border-bottom: none;
+    }
+
+    .logo-bar a img {
+      height: 28px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0.85;
+    }
+
+    .logo-bar a img:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+
   </style>
 </head>
 <body>
   <div class="container">
+
     <header>
       <h1>Tong Wu 武桐</h1>
       <p>PhD Candidate | Formal Verification & Machine Learning</p>
@@ -226,19 +253,26 @@
     </section>
 
     <section>
-      <h2>Links</h2>
-      <p><a href="https://scholar.google.com/citations?user=v3AATMQAAAAJ&hl=en">Google Scholar</a> · <a href="https://github.com/Anthonysdu">GitHub</a> · <a href="https://orcid.org/0000-0002-0986-4150">ORCID</a> · <a href="https://www.linkedin.com/in/tongwuuom">LinkedIn</a>· <a href="https://research.manchester.ac.uk/en/persons/tong.wu-11-postgrad">Manchester Profile</a></p>
-    </section>
-
-    <section>
       <h2>Contact</h2>
       <p>Email: wutonguom[at]gmail.com</p>
       <p>Office: Kilburn Building, the University of Manchester</p>
     </section>
-
-    <footer>
-      <p>&copy; 2025 Tong Wu</p>
-    </footer>
+    <!-- Moved the logo bar to the bottom -->
+    <div class="logo-bar">
+      <a href="https://scholar.google.com/citations?user=v3AATMQAAAAJ&hl=en" title="Google Scholar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar Logo" />
+      </a>
+      <a href="https://github.com/Anthonysdu" title="GitHub">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" />
+      </a>
+      <a href="https://orcid.org/0000-0002-0986-4150" title="ORCID">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID Logo" />
+      </a>
+      <a href="https://www.linkedin.com/in/tongwuuom" title="LinkedIn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" />
+      </a>
+    </div>
+    
   </div>
 </body>
 </html>
