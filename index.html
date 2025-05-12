@@ -7,212 +7,172 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-light: #fcf9f3;
-      --bg-dark: #222222;
-      --text-dark: #303030;
-      --text-muted: #7a7a7a;
-      --accent: #b1b1b1;
-      --primary: #191919;
-      --primary-hover: #2e2e2e;
+      --bg-light: #f9f9f9;
+      --bg-dark: #111;
+      --text-dark: #333;
+      --accent: #7A2F8E; /* Manchester Purple */
+      --primary: #333;
+      --primary-hover: #2d2d2d;
       --code-bg: #f4f4f4;
       --font-serif: 'EB Garamond', serif;
       --font-sans: 'Inter', sans-serif;
-      --transition-speed: 0.35s;
+      --transition-speed: 0.3s;
     }
 
     body {
-      margin: 0;
       font-family: var(--font-sans);
-      background: linear-gradient(135deg, var(--bg-light), #eaeaea);
+      background-color: var(--bg-light);
       color: var(--text-dark);
       line-height: 1.75;
-      padding: 6rem 4rem;
-      font-size: 1.16rem;
+      margin: 0;
+      padding: 5rem 2rem;
       box-sizing: border-box;
-      height: 100%;
-      text-align: left;
-      position: relative;
     }
 
     .container {
-      max-width: 880px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 1.5rem;
-      width: 100%;
     }
 
     header {
-      text-align: left;
+      text-align: center;
       margin-bottom: 4rem;
-      transition: margin-bottom var(--transition-speed);
     }
 
     header h1 {
       font-family: var(--font-serif);
-      font-size: 3.3rem;
+      font-size: 3rem;
       color: var(--primary);
-      font-weight: 800;
-      letter-spacing: 0.08rem;
-      line-height: 1.1;
-      transition: letter-spacing var(--transition-speed), color var(--transition-speed);
-    }
-
-    header h1:hover {
-      color: var(--primary-hover);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
     }
 
     header p {
       font-style: italic;
-      font-size: 1.25rem;
       color: var(--accent);
+      font-size: 1.2rem;
       letter-spacing: 0.1rem;
-      margin-top: -0.25rem;
-      transition: color var(--transition-speed);
     }
 
-    header p:hover {
-      color: var(--primary-hover);
+    section {
+      margin-bottom: 4rem;
     }
 
     h2 {
       font-family: var(--font-serif);
-      font-size: 1.9rem;
+      font-size: 2rem;
       color: var(--primary);
-      margin-top: 4rem;
-      border-bottom: 3px solid #ddd;
-      padding-bottom: 0.6rem;
-      letter-spacing: 0.08rem;
-      transition: border-color var(--transition-speed);
-    }
-
-    h2:hover {
-      border-color: var(--primary-hover);
-    }
-
-    section {
-      margin-bottom: 4.5rem;
-      width: 100%;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
     }
 
     p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-dark);
-      line-height: 1.85;
-      letter-spacing: 0.08rem;
+      line-height: 1.7;
       max-width: 100%;
       margin: 0;
     }
 
-    code {
-      font-family: 'Courier New', monospace;
-      padding: 0.45rem 0.7rem;
-      font-size: 1rem;
-      border-radius: 6px;
-      color: var(--primary);
-      transition: background-color var(--transition-speed);
-      background-color: transparent;
-    }
-
-    code:hover {
-      background-color: transparent;
-    }
-
     a {
       color: var(--primary);
-      text-decoration: none;
-      border-bottom: 1px dotted var(--primary);
-      transition: color var(--transition-speed), border-bottom var(--transition-speed);
+      text-decoration: none; /* Remove underline */
+      transition: color 0.3s ease;
     }
 
     a:hover {
       color: var(--primary-hover);
-      border-bottom: 1px solid var(--primary-hover);
     }
 
-    footer {
-      font-size: 1rem;
-      margin-top: 6rem;
-      color: var(--text-muted);
-      text-align: left;
-      letter-spacing: 0.12rem;
-      transition: color var(--transition-speed);
-    }
-
-    footer:hover {
-      color: var(--primary);
-    }
-
-    ul {
-      list-style-type: none;
+    .publication-list {
+      list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    li {
+    .publication-list li {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      transition: box-shadow 0.3s ease;
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin-bottom: 1rem;
-      width: 100%;
+      flex-direction: column;
     }
 
-    li code {
-      flex-shrink: 0;
-      width: 150px;
-      text-align: left;
+    .publication-list li:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .publication-list li a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .publication-list .publication-title {
       font-size: 1rem;
-      line-height: 1.5;
-      padding-right: 1rem;
+      font-weight: 700;
     }
 
-    li .publication-title {
-      flex-grow: 1;
-      text-align: left;
-      font-size: 1.15rem;
-      line-height: 1.5;
-      margin-left: 0;
+    .publication-list .publication-conference {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--accent);
+      margin-top: 0.5rem;
     }
 
-    li .publication-title strong {
-      font-weight: bold;
+    .publication-list code {
+      background-color: var(--code-bg);
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      color: var(--accent);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    footer {
+      font-size: 1rem;
+      text-align: center;
+      color: var(--accent);
+      margin-top: 5rem;
+    }
+
+    .logo-bar {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .logo-bar a {
+      margin: 0 1rem;
+      display: inline-block;
+    }
+
+    .logo-bar a img {
+      height: 30px;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-bar a img:hover {
+      opacity: 1;
     }
 
     @media (max-width: 768px) {
-      body {
-        padding: 5rem 3rem;
-      }
-
       header h1 {
         font-size: 2.5rem;
       }
 
       h2 {
-        font-size: 1.6rem;
+        font-size: 1.75rem;
       }
-    }
-
-    /* Move logo bar to bottom */
-    .logo-bar {
-      bottom: 1rem;
-      right: 1rem;
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .logo-bar a {
-      border-bottom: none;
-    }
-
-    .logo-bar a img {
-      height: 28px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-      opacity: 0.85;
-    }
-
-    .logo-bar a img:hover {
-      transform: scale(1.1);
-      opacity: 1;
     }
 
   </style>
@@ -237,12 +197,37 @@
 
     <section>
       <h2>Publications</h2>
-      <ul>
-        <li><code><a href="https://link.springer.com/chapter/10.1007/978-3-031-90900-9_15">[<strong>FASE 2025</strong>]</a></code><span class="publication-title">ESBMC v7.7: Automating Branch Coverage Analysis Using CFG-Based Instrumentation and SMT Solving (Competition Contribution)</span></li>
-        <li><code><a href="https://link.springer.com/chapter/10.1007/978-3-031-90660-2_16">[<strong>TACAS 2025</strong>]</a></code><span class="publication-title">ESBMC v7.7: Efficient Concurrent Software Verification with Scheduling, Incremental SMT and Partial Order Reduction (Competition Contribution)</span></li>
-        <li><code><a href="https://link.springer.com/chapter/10.1007/978-3-031-74776-2_18">[<strong>SAS 2024</strong>]</a></code><span class="publication-title">Verifying components of Arm&reg; Confidential Computing Architecture with ESBMC</span></li>
-        <li><code><a href="https://dl.acm.org/doi/10.1145/3650212.3685303">[<strong>ISSTA 2024</strong>]</a></code><span class="publication-title">JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking</span></li>
-        <li><code><a href="https://link.springer.com/chapter/10.1007/978-3-030-99527-0_36">[<strong>TACAS 2022</strong>]</a></code><span class="publication-title">Wit4Java: A Violation-Witness Validator for Java Verifiers (Competition Contribution)</span></li>
+      <ul class="publication-list">
+        <li>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-90900-9_15" target="_blank">
+            <span class="publication-title">ESBMC v7.7: Automating Branch Coverage Analysis Using CFG-Based Instrumentation and SMT Solving (Competition Contribution)</span>
+            <span class="publication-conference"><code>[FASE 2025]</code></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-90660-2_16" target="_blank">
+            <span class="publication-title">ESBMC v7.7: Efficient Concurrent Software Verification with Scheduling, Incremental SMT and Partial Order Reduction (Competition Contribution)</span>
+            <span class="publication-conference"><code>[TACAS 2025]</code></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-99527-0_36" target="_blank">
+            <span class="publication-title">Verifying components of Arm&reg; Confidential Computing Architecture with ESBMC</span>
+            <span class="publication-conference"><code>[SAS 2024]</code></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://dl.acm.org/doi/10.1145/3650212.3685303" target="_blank">
+            <span class="publication-title">JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking</span>
+            <span class="publication-conference"><code>[ISSTA 2024]</code></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-99527-0_36" target="_blank">
+            <span class="publication-title">Wit4Java: A Violation-Witness Validator for Java Verifiers (Competition Contribution)</span>
+            <span class="publication-conference"><code>[TACAS 2022]</code></span>
+          </a>
+        </li>
       </ul>
     </section>
 
@@ -257,7 +242,11 @@
       <p>Email: wutonguom[at]gmail.com</p>
       <p>Office: Kilburn Building, the University of Manchester, M13 9PL</p>
     </section>
-    <!-- Moved the logo bar to the bottom -->
+
+    <footer>
+      <p>&copy; 2025 Tong Wu. All rights reserved.</p>
+    </footer>
+
     <div class="logo-bar">
       <a href="https://scholar.google.com/citations?user=v3AATMQAAAAJ&hl=en" title="Google Scholar">
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar Logo" />
@@ -272,7 +261,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" />
       </a>
     </div>
-    
+
   </div>
 </body>
 </html>
