@@ -77,8 +77,15 @@
 
     a {
       color: var(--primary);
-      text-decoration: none; /* Remove underline */
       transition: color 0.3s ease;
+    }
+
+    a.no-underline {
+      text-decoration: none;
+    }
+
+    a.underline {
+      text-decoration: underline;
     }
 
     a:hover {
@@ -196,6 +203,20 @@
     </section>
 
     <section>
+      <h2>News</h2>
+      <ul>
+        <!-- <li><strong>March 2025:</strong> Published a new paper on ESBMC v7.7 at <i>FASE 2025</i>.</li> -->
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Research Projects</h2>
+      <p><strong><a href="https://github.com/esbmc/esbmc">ESBMC:</a></strong> A SMT-based bounded model checker for the verification of single- and multi-threaded C/C++ programs.</p>
+      <p><strong><a href="https://github.com/wit4java/wit4java">Wit4Java:</a></strong> A violation-witness validator for Java verifiers.</p>
+    </section>
+    
+
+    <section>
       <h2>Publications</h2>
       <ul class="publication-list">
         <li>
@@ -229,12 +250,6 @@
           </a>
         </li>
       </ul>
-    </section>
-
-    <section>
-      <h2>Research Projects</h2>
-      <p><strong><a href="https://github.com/esbmc/esbmc">ESBMC:</a></strong> A SMT-based bounded model checker for the verification of single- and multi-threaded C/C++ programs.</p>
-      <p><strong><a href="https://github.com/wit4java/wit4java">Wit4Java:</a></strong> A violation-witness validator for Java verifiers.</p>
     </section>
 
     <section>
