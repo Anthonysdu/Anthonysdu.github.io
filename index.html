@@ -4,295 +4,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tong Wu</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-  :root {
-  --bg-light: #ffffff;
-  --bg-section: #f5f7fa;
-  --text-primary: #222222;
-  --text-secondary: #555555;
-  --accent: #000000;
-  --border-color: #d0d7de;
-  --font-serif: 'EB Garamond', serif;
-  --font-sans: 'Inter', sans-serif;
-  --transition-speed: 0.3s;
-}
+    :root {
+      --accent: #00498d;
+      --text: #222;
+      --muted: #555;
+      --border: #ccc;
+    }
 
-body {
-  font-family: var(--font-sans);
-  background-color: var(--bg-light);
-  color: var(--text-primary);
-  line-height: 1.9;
-  margin: 0;
-  padding: 4rem 3rem;
-  box-sizing: border-box;
-}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: var(--text);
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      line-height: 1.7;
+      font-size: 16px;
+    }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--bg-section);
-  padding: 3rem 4rem 4rem 4rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
+    h1, h2 {
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
 
-header {
-  text-align: center;
-  margin-bottom: 5rem;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 1rem;
-}
+    h1 {
+      font-size: 2.2rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+      margin-top: 0;
+    }
 
-header h1 {
-  font-family: var(--font-serif);
-  font-size: 3.6rem;
-  color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  letter-spacing: 0.1em;
-}
+    h2 {
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
 
-header p {
-  font-style: italic;
-  color: var(--text-secondary);
-  font-size: 1.3rem;
-  letter-spacing: 0.12em;
-  margin-top: 0;
-}
+    p, li {
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
 
-section {
-  margin-bottom: 4.5rem;
-}
+    header p {
+      font-style: italic;
+      color: var(--muted);
+    }
 
-h2 {
-  font-family: var(--font-serif);
-  font-size: 2.2rem;
-  color: var(--accent);
-  margin-bottom: 1.8rem;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 0.6rem;
-  letter-spacing: 0.06em;
-}
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-p {
-  font-size: 1.15rem;
-  color: var(--text-primary);
-  max-width: 100%;
-  margin-top: 0;
-  margin-bottom: 1.4rem;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color var(--transition-speed) ease;
-}
+    ul {
+      padding-left: 1.4rem;
+    }
 
-a:hover, a:focus {
-  color: #00251a;
-  text-decoration: underline;
-}
+    li {
+      margin-bottom: 0.7rem;
+    }
 
-.publication-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-}
-
-.publication-list li {
-  background-color: #fff;
-  border-left: 5px solid var(--accent);
-  padding: 1.4rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-  transition: box-shadow var(--transition-speed) ease;
-}
-
-.publication-list li:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.publication-list li a {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  color: var(--accent);
-}
-
-.publication-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.publication-conference {
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--text-secondary);
-  margin-top: 0.3rem;
-  letter-spacing: 0.05em;
-}
-
-.publication-list code {
-  background-color: #ffffff;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  color: #0d380b;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-footer {
-  font-size: 1rem;
-  text-align: center;
-  color: var(--text-secondary);
-  margin-top: 5rem;
-  letter-spacing: 0.05em;
-}
-
-.logo-bar {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.logo-bar a {
-  margin: 0 1rem;
-  display: inline-block;
-}
-
-.logo-bar a img {
-  height: 30px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-  filter: grayscale(30%);
-}
-
-.logo-bar a:hover img {
-  opacity: 1;
-  filter: grayscale(0);
-}
-
-@media (max-width: 768px) {
-  body {
-    padding: 3rem 1.5rem;
-  }
-
-  .container {
-    padding: 2rem 2rem 3rem 2rem;
-  }
-
-  header h1 {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-size: 1.9rem;
-  }
-
-  .publication-list li {
-    padding: 1rem 1.3rem;
-  }
-}
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 4rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
+    <h1>Tong Wu 武桐</h1>
+    <p>PhD Candidate | Formal Verification & Machine Learning</p>
+  </header>
 
-    <header>
-      <h1>Tong Wu 武桐</h1>
-      <p>PhD Candidate | Formal Verification & Machine Learning</p>
-    </header>
-
-    <section>
-      <p>I am a PhD student in the <a href="https://www.cs.manchester.ac.uk/research/expertise/systems-and-software-security/">S3 Group</a> at
-        the <a href="https://www.manchester.ac.uk/">University of Manchester</a>, 
-        supervised by <a href="https://ssvlab.github.io/lucasccordeiro/">Prof. Lucas C. Cordeiro</a> and 
-        <a href="https://personalpages.manchester.ac.uk/staff/pavlos.petoumenos/">Dr. Pavlos Petoumenos</a>,
-        fully funded by <a href="https://www.ukri.org/councils/epsrc/">EPSRC</a>
-        and <a href="https://www.cs.manchester.ac.uk/arm-coe/">Arm Centre of Excellence</a>.
-        My research interests focus on formal verification and machine learning for verifying the safety of concurrent software.</p>
-    </section>
-
-    <section>
-      <h2>News</h2>
-      <ul>
-        <!-- <li><strong>March 2025:</strong> Published a new paper on ESBMC v7.7 at <i>FASE 2025</i>.</li> -->
-      </ul>
-    </section>
-    
-    <section>
-      <h2>Research Projects</h2>
-      <p><strong><a href="https://github.com/esbmc/esbmc">ESBMC:</a></strong> A SMT-based bounded model checker for the verification of single- and multi-threaded C/C++ programs.</p>
-      <p><strong><a href="https://github.com/wit4java/wit4java">Wit4Java:</a></strong> A violation-witness validator for Java verifiers.</p>
-    </section>
-    
-
-    <section>
-      <h2>Publications</h2>
-      <ul class="publication-list">
-        <li>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-90900-9_15" target="_blank">
-            <span class="publication-title">ESBMC v7.7: Automating Branch Coverage Analysis Using CFG-Based Instrumentation and SMT Solving (Competition Contribution)</span>
-            <span class="publication-conference"><code>[FASE 2025]</code></span>
-          </a>
-        </li>
-        <li>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-90660-2_16" target="_blank">
-            <span class="publication-title">ESBMC v7.7: Efficient Concurrent Software Verification with Scheduling, Incremental SMT and Partial Order Reduction (Competition Contribution)</span>
-            <span class="publication-conference"><code>[TACAS 2025]</code></span>
-          </a>
-        </li>
-        <li>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-74776-2_18" target="_blank">
-            <span class="publication-title">Verifying components of Arm&reg; Confidential Computing Architecture with ESBMC</span>
-            <span class="publication-conference"><code>[SAS 2024]</code></span>
-          </a>
-        </li>
-        <li>
-          <a href="https://dl.acm.org/doi/10.1145/3650212.3685303" target="_blank">
-            <span class="publication-title">JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking</span>
-            <span class="publication-conference"><code>[ISSTA 2024]</code></span>
-          </a>
-        </li>
-        <li>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-030-99527-0_36" target="_blank">
-            <span class="publication-title">Wit4Java: A Violation-Witness Validator for Java Verifiers (Competition Contribution)</span>
-            <span class="publication-conference"><code>[TACAS 2022]</code></span>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Links</h2>
-    <div class="logo-bar">
-      <a href="mailto:wutonguom@gmail.com" title="Gmail">
-        <img src="gmail-svgrepo-com.svg" alt="Gmail Logo" />
-      </a>
-      <a href="https://scholar.google.com/citations?user=v3AATMQAAAAJ&hl=en" title="Google Scholar">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar Logo" />
-      </a>
-      <a href="https://github.com/Anthonysdu" title="GitHub">
-        <img src="github-mark.png" alt="GitHub Logo" />
-      </a>
-      <a href="https://orcid.org/0000-0002-0986-4150" title="ORCID">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID Logo" />
-      </a>
-      <a href="https://www.linkedin.com/in/tongwuuom" title="LinkedIn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" />
-      </a>
-    </div>
+  <section>
+    <p>I am a PhD student in the <a href="https://www.cs.manchester.ac.uk/research/expertise/systems-and-software-security/">S3 Group</a> at 
+    the <a href="https://www.manchester.ac.uk/">University of Manchester</a>, supervised by 
+    <a href="https://ssvlab.github.io/lucasccordeiro/">Prof. Lucas C. Cordeiro</a> and 
+    <a href="https://personalpages.manchester.ac.uk/staff/pavlos.petoumenos/">Dr. Pavlos Petoumenos</a>, fully funded by 
+    <a href="https://www.ukri.org/councils/epsrc/">EPSRC</a> and 
+    <a href="https://www.cs.manchester.ac.uk/arm-coe/">Arm Centre of Excellence</a>. 
+    My research interests focus on formal verification and machine learning for verifying the safety of concurrent software.</p>
   </section>
+
+  <section>
+    <h2>Research Projects</h2>
+    <p><strong><a href="https://github.com/esbmc/esbmc">ESBMC:</a></strong> A SMT-based bounded model checker for single- and multi-threaded C/C++ programs.</p>
+    <p><strong><a href="https://github.com/wit4java/wit4java">Wit4Java:</a></strong> A violation-witness validator for Java verifiers.</p>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <ul>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-90900-9_15" target="_blank">ESBMC v7.7: Automating Branch Coverage Analysis Using CFG-Based Instrumentation and SMT Solving (Competition Contribution) [FASE 2025]</a></li>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-90660-2_16" target="_blank">ESBMC v7.7: Efficient Concurrent Software Verification with Scheduling, Incremental SMT and Partial Order Reduction (Competition Contribution) [TACAS 2025]</a></li>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-74776-2_18" target="_blank">Verifying components of Arm® Confidential Computing Architecture with ESBMC [SAS 2024]</a></li>
+      <li><a href="https://dl.acm.org/doi/10.1145/3650212.3685303" target="_blank">JCWIT: A Correctness-Witness Validator for Java Programs Based on Bounded Model Checking [ISSTA 2024]</a></li>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-030-99527-0_36" target="_blank">Wit4Java: A Violation-Witness Validator for Java Verifiers (Competition Contribution) [TACAS 2022]</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <p>
+      <a href="mailto:wutonguom@gmail.com">Email</a> | 
+      <a href="https://scholar.google.com/citations?user=v3AATMQAAAAJ&hl=en" target="_blank">Google Scholar</a> | 
+      <a href="https://github.com/Anthonysdu" target="_blank">GitHub</a> | 
+      <a href="https://orcid.org/0000-0002-0986-4150" target="_blank">ORCID</a> | 
+      <a href="https://www.linkedin.com/in/tongwuuom" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Tong Wu.</p>
+    &copy; 2025 Tong Wu.
   </footer>
-  </div>
 </body>
 </html>
