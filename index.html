@@ -110,6 +110,46 @@
     color: var(--text-secondary);
   }
 
+  .timeline {
+    position: relative;
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 1.8rem;
+    padding-left: 1rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent);
+    border-radius: 50%;
+  }
+
+  .timeline-year {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .timeline-content {
+    color: var(--text-primary);
+    line-height: 1;
+  }
+
+  .timeline-content strong {
+    color: var(--text-primary);
+  }
+
   @media (max-width: 600px) {
     body {
       padding: 1.5rem 1rem;
@@ -122,6 +162,14 @@
 
     h2 {
       font-size: 1.3rem;
+    }
+
+    .timeline {
+      padding-left: 1rem;
+    }
+
+    .timeline-item {
+      padding-left: 0.8rem;
     }
   }
 </style>
@@ -155,6 +203,54 @@
       <img src="wit4java.png" alt="Wit4Java icon" loading="lazy" />
       <strong><a href="https://github.com/wit4java" target="_blank" rel="noopener">Wit4Java:</a></strong>
       <span>A violation-witness validator for Java verifiers.</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience & Education</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-year">2025 – Present</div>
+        <div class="timeline-content">
+          <strong>Research Engineer</strong> — <a href="https://www.veribee.co/" target="_blank" rel="noopener">VeriBee</a><br>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2023 – 2023</div>
+        <div class="timeline-content">
+          <strong>Research Intern</strong> — <a href="https://www.arm.com/" target="_blank" rel="noopener">Arm</a><br>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2022 – Present</div>
+        <div class="timeline-content">
+          <strong>PhD in Computer Science</strong> — <a href="https://www.manchester.ac.uk/" target="_blank" rel="noopener">The University of Manchester</a><br>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2020 – 2021</div>
+        <div class="timeline-content">
+          <strong>Msc in Computer Science</strong> — <a href="https://www.manchester.ac.uk/" target="_blank" rel="noopener">The University of Manchester</a><br>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2018 – 2020</div>
+        <div class="timeline-content">
+          <strong>Software Engineer</strong> — <a href="https://www.icbc-ltd.com/en/column/1438058319654043654.html/" target="_blank" rel="noopener">ICBC</a><br>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2014 – 2018</div>
+        <div class="timeline-content">
+          <strong>BEng in Software Engineering</strong> — <a href="https://www.en.sdu.edu.cn/" target="_blank" rel="noopener">Shandong University</a><br>
+        </div>
+      </div>
     </div>
   </section>
 
