@@ -8,12 +8,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Roboto:wght@400;700&display=swap');
 
   :root {
-    --bg: #0f1c2f;
-    --text-primary: #e0e6f0;
-    --text-secondary: #a0abc8;
-    --accent: #4fc3f7;
-    --border: #294261;
-    --link-hover: #81d4fa;
+  --bg: #f6f5f2;
+  --text-primary: #22201c;
+  --text-secondary: #5c554e;
+  --accent: #7b6041;
+  --border: #d9d4cc;
+  --link-hover: #5a4632;
   }
 
   body {
@@ -86,9 +86,13 @@
   .project-item img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) sepia(1) saturate(5) hue-rotate(20deg);
+    transition: filter 0.3s ease;
   }
-
+  .project-item img:hover,
+  .project-item img:active {
+    filter: none;
+  }
   .year-tag {
     font-family: 'Source Code Pro', monospace;
     color: var(--text-secondary);
@@ -130,9 +134,15 @@
 
   <section>
     <p>
-      I am a final-year PhD student in the <a href="https://www.cs.manchester.ac.uk/research/expertise/systems-and-software-security/" target="_blank" rel="noopener">S3 Group</a> at the <a href="https://www.manchester.ac.uk/" target="_blank" rel="noopener">University of Manchester</a>, supervised by <a href="https://ssvlab.github.io/lucasccordeiro/" target="_blank" rel="noopener">Prof. Lucas C. Cordeiro</a> and <a href="https://personalpages.manchester.ac.uk/staff/pavlos.petoumenos/" target="_blank" rel="noopener">Dr. Pavlos Petoumenos</a>. Fully funded by <a href="https://www.ukri.org/councils/epsrc/" target="_blank" rel="noopener">EPSRC</a> and <a href="https://www.cs.manchester.ac.uk/arm-coe/" target="_blank" rel="noopener">Arm Centre of Excellence</a>. My research interests focus on formal verification and machine learning for verifying the safety of concurrent software.
+      I am a final-year PhD candidate in the <a href="https://www.cs.manchester.ac.uk/research/expertise/systems-and-software-security/" target="_blank" rel="noopener">Systems and Software Security Group</a> 
+      at the <a href="https://www.manchester.ac.uk/" target="_blank" rel="noopener">University of Manchester</a>, 
+      supervised by Prof. Lucas C. Cordeiro and Dr. Pavlos Petoumenos. 
+      My research is fully funded by EPSRC and the Arm Centre of Excellence, focusing on Formal Verification and Machine Learning for ensuring the correctness and safety of sequential and concurrent software.
     </p>
-  </section>
+    <p>
+      In parallel, I work as a Research Engineer at <a href="https://www.veribee.co/" target="_blank" rel="noopener">VeriBee</a>, where I apply Formal Methods to improve the reliability and correctness of large-scale software systems.
+    </p>
+  </section>  
 
   <section>
     <h2>Research Projects</h2>
